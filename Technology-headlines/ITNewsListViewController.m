@@ -16,7 +16,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self loadData];
+}
+
+#pragma mark -加载数据
+
+- (void)loadData{
+
+    //URL
+    NSString *urlString = @"http://news.coolban.com/Api/Index/news_list/app/2/cat/0/limit/20/time/1464881444/type/0?channel=appstore&uuid=204ACEB6-9827-4AC7-A107-7CE2E48B0897&net=5&model=iPhone&ver=1.0.5";
+    
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    //网络请求
+    [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"请求错误！%@",error);
+            return ;
+        }
+        
+        //json 解析
+        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+        
+        NSLog(@"%@",array);
+    }]resume];
 }
 
 - (void)didReceiveMemoryWarning {
