@@ -23,4 +23,5 @@
 // 来源网站
 @property (nonatomic, copy) NSString *sitename;
 
+@property (nonatomic, copy , readonly) NSString *docDate;
 @end
