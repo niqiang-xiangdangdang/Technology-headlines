@@ -10,7 +10,7 @@
 #import "ITNews.h"
 
 @interface ITNewsListViewController ()
-
+@property (nonatomic, strong) NSMutableArray <ITNews *> *newsList;
 @end
 
 @implementation ITNewsListViewController
@@ -51,10 +51,28 @@
             [arrayM addObject:model];
         }
         
-        NSLog(@"%@",arrayM);
+//        NSLog(@"%@",arrayM);
+        
+        self.newsList = arrayM;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
     }]resume];
 }
 
+#pragma mark -UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _newsList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId" forIndexPath:indexPath];
+    
+    cell.textLabel.text = _newsList[indexPath.row].title;
+    return cell;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -10,6 +10,11 @@
 
 @implementation ITNews
 
+- (NSString *)docDate{
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_addtime.integerValue];
+    return date.description;
+}
+
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{}
 
 - (NSString *)description{
