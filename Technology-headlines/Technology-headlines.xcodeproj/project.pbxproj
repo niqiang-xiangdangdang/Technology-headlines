@@ -24,6 +24,7 @@
 		D31862CE1D081B71005F1F31 /* UIScreen+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862C11D081B71005F1F31 /* UIScreen+CZAddition.m */; };
 		D31862CF1D081B71005F1F31 /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862C31D081B71005F1F31 /* UIView+CZAddition.m */; };
 		D31862D01D081B71005F1F31 /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862C51D081B71005F1F31 /* UIViewController+CZAddition.m */; };
+		D31862D31D082028005F1F31 /* ITNews.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862D21D082028005F1F31 /* ITNews.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		D31862C31D081B71005F1F31 /* UIView+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZAddition.m"; sourceTree = "<group>"; };
 		D31862C41D081B71005F1F31 /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAddition.h"; sourceTree = "<group>"; };
 		D31862C51D081B71005F1F31 /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
+		D31862D11D082028005F1F31 /* ITNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITNews.h; sourceTree = "<group>"; };
+		D31862D21D082028005F1F31 /* ITNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITNews.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				D31862971D080E2D005F1F31 /* AppDelegate.h */,
 				D31862981D080E2D005F1F31 /* AppDelegate.m */,
 				D31862AB1D080E8D005F1F31 /* ITNewsListViewController.h */,
+				D31862D11D082028005F1F31 /* ITNews.h */,
+				D31862D21D082028005F1F31 /* ITNews.m */,
 				D31862AC1D080E8D005F1F31 /* ITNewsListViewController.m */,
 				D318629D1D080E2D005F1F31 /* Main.storyboard */,
 				D31862A01D080E2D005F1F31 /* Assets.xcassets */,
@@ -214,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D31862D31D082028005F1F31 /* ITNews.m in Sources */,
 				D31862CC1D081B71005F1F31 /* UIColor+CZAddition.m in Sources */,
 				D31862C71D081B71005F1F31 /* NSArray+Log.m in Sources */,
 				D31862CA1D081B71005F1F31 /* NSString+Hash.m in Sources */,
