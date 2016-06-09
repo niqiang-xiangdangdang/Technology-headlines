@@ -22,8 +22,9 @@
 
 #pragma mark -加载数据
 
-- (void)loadData{
-
+//- (void)loadData{
+- (IBAction)loadData{
+    NSLog(@"开始刷新");
     //URL
     NSString *urlString = @"http://news.coolban.com/Api/Index/news_list/app/2/cat/0/limit/20/time/1464881444/type/0?channel=appstore&uuid=204ACEB6-9827-4AC7-A107-7CE2E48B0897&net=5&model=iPhone&ver=1.0.5";
     
@@ -56,6 +57,11 @@
         self.newsList = arrayM;
         
         dispatch_async(dispatch_get_main_queue(), ^{
+            
+            NSLog(@"结束刷新");
+            
+            [self.refreshControl endRefreshing];
+            
             [self.tableView reloadData];
         });
     }]resume];
