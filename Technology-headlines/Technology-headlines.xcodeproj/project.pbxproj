@@ -12,7 +12,6 @@
 		D318629F1D080E2D005F1F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D318629D1D080E2D005F1F31 /* Main.storyboard */; };
 		D31862A11D080E2D005F1F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31862A01D080E2D005F1F31 /* Assets.xcassets */; };
 		D31862A41D080E2D005F1F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31862A21D080E2D005F1F31 /* LaunchScreen.storyboard */; };
-		D31862AD1D080E8D005F1F31 /* ITNewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862AC1D080E8D005F1F31 /* ITNewsListViewController.m */; };
 		D31862C61D081B71005F1F31 /* NSArray+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862B11D081B71005F1F31 /* NSArray+CZAddition.m */; };
 		D31862C71D081B71005F1F31 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862B31D081B71005F1F31 /* NSArray+Log.m */; };
 		D31862C81D081B71005F1F31 /* NSAttributedString+CZAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862B51D081B71005F1F31 /* NSAttributedString+CZAdditon.m */; };
@@ -25,6 +24,9 @@
 		D31862CF1D081B71005F1F31 /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862C31D081B71005F1F31 /* UIView+CZAddition.m */; };
 		D31862D01D081B71005F1F31 /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862C51D081B71005F1F31 /* UIViewController+CZAddition.m */; };
 		D31862D31D082028005F1F31 /* ITNews.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862D21D082028005F1F31 /* ITNews.m */; };
+		D31862D61D092794005F1F31 /* ITPullupView.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862D51D092794005F1F31 /* ITPullupView.m */; };
+		D31862D91D09284D005F1F31 /* ITNewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D31862D81D09284D005F1F31 /* ITNewsListViewController.m */; };
+		D31862DB1D092891005F1F31 /* ITPullupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D31862DA1D092891005F1F31 /* ITPullupView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +38,6 @@
 		D31862A01D080E2D005F1F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D31862A31D080E2D005F1F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D31862A51D080E2D005F1F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D31862AB1D080E8D005F1F31 /* ITNewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ITNewsListViewController.h; path = ../ITNewsListViewController.h; sourceTree = "<group>"; };
-		D31862AC1D080E8D005F1F31 /* ITNewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ITNewsListViewController.m; path = ../ITNewsListViewController.m; sourceTree = "<group>"; };
 		D31862AF1D081B71005F1F31 /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
 		D31862B01D081B71005F1F31 /* NSArray+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CZAddition.h"; sourceTree = "<group>"; };
 		D31862B11D081B71005F1F31 /* NSArray+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CZAddition.m"; sourceTree = "<group>"; };
@@ -63,6 +63,11 @@
 		D31862C51D081B71005F1F31 /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
 		D31862D11D082028005F1F31 /* ITNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITNews.h; sourceTree = "<group>"; };
 		D31862D21D082028005F1F31 /* ITNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITNews.m; sourceTree = "<group>"; };
+		D31862D41D092794005F1F31 /* ITPullupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITPullupView.h; sourceTree = "<group>"; };
+		D31862D51D092794005F1F31 /* ITPullupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITPullupView.m; sourceTree = "<group>"; };
+		D31862D71D09284D005F1F31 /* ITNewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITNewsListViewController.h; sourceTree = "<group>"; };
+		D31862D81D09284D005F1F31 /* ITNewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITNewsListViewController.m; sourceTree = "<group>"; };
+		D31862DA1D092891005F1F31 /* ITPullupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ITPullupView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +103,13 @@
 				D31862AE1D081B71005F1F31 /* Additions */,
 				D31862971D080E2D005F1F31 /* AppDelegate.h */,
 				D31862981D080E2D005F1F31 /* AppDelegate.m */,
-				D31862AB1D080E8D005F1F31 /* ITNewsListViewController.h */,
-				D31862AC1D080E8D005F1F31 /* ITNewsListViewController.m */,
+				D31862D71D09284D005F1F31 /* ITNewsListViewController.h */,
+				D31862D81D09284D005F1F31 /* ITNewsListViewController.m */,
 				D31862D11D082028005F1F31 /* ITNews.h */,
 				D31862D21D082028005F1F31 /* ITNews.m */,
+				D31862D41D092794005F1F31 /* ITPullupView.h */,
+				D31862D51D092794005F1F31 /* ITPullupView.m */,
+				D31862DA1D092891005F1F31 /* ITPullupView.xib */,
 				D318629D1D080E2D005F1F31 /* Main.storyboard */,
 				D31862A01D080E2D005F1F31 /* Assets.xcassets */,
 				D31862A21D080E2D005F1F31 /* LaunchScreen.storyboard */,
@@ -209,6 +217,7 @@
 				D31862A41D080E2D005F1F31 /* LaunchScreen.storyboard in Resources */,
 				D31862A11D080E2D005F1F31 /* Assets.xcassets in Resources */,
 				D318629F1D080E2D005F1F31 /* Main.storyboard in Resources */,
+				D31862DB1D092891005F1F31 /* ITPullupView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,13 +231,14 @@
 				D31862D31D082028005F1F31 /* ITNews.m in Sources */,
 				D31862CC1D081B71005F1F31 /* UIColor+CZAddition.m in Sources */,
 				D31862C71D081B71005F1F31 /* NSArray+Log.m in Sources */,
+				D31862D61D092794005F1F31 /* ITPullupView.m in Sources */,
 				D31862CA1D081B71005F1F31 /* NSString+Hash.m in Sources */,
 				D31862991D080E2D005F1F31 /* AppDelegate.m in Sources */,
 				D31862C81D081B71005F1F31 /* NSAttributedString+CZAdditon.m in Sources */,
 				D31862CB1D081B71005F1F31 /* UIButton+CZAddition.m in Sources */,
 				D31862CF1D081B71005F1F31 /* UIView+CZAddition.m in Sources */,
-				D31862AD1D080E8D005F1F31 /* ITNewsListViewController.m in Sources */,
 				D31862CD1D081B71005F1F31 /* UILabel+CZAddition.m in Sources */,
+				D31862D91D09284D005F1F31 /* ITNewsListViewController.m in Sources */,
 				D31862C91D081B71005F1F31 /* NSObject+CZAddition.m in Sources */,
 				D31862961D080E2D005F1F31 /* main.m in Sources */,
 				D31862D01D081B71005F1F31 /* UIViewController+CZAddition.m in Sources */,
@@ -380,6 +390,7 @@
 				D31862AA1D080E2D005F1F31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
