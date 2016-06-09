@@ -79,13 +79,22 @@
         
 //        NSLog(@"%@",arrayM);
         
-        self.newsList = arrayM;
+//        self.newsList = arrayM;
+        if (isPullup) {
+            [self.newsList addObjectsFromArray:arrayM];
+        } else {
+            self.newsList = arrayM ;
+        }
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
             NSLog(@"结束刷新");
             
+            //关闭刷新控件
             [self.refreshControl endRefreshing];
+            
+            //关闭上拉刷新动画
+            [self.pullipView.indicator stopAnimating];
             
             [self.tableView reloadData];
         });
