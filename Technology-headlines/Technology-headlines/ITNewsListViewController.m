@@ -9,7 +9,9 @@
 #import "ITNewsListViewController.h"
 #import "ITNews.h"
 #import "ITPullupView.h"
+#import "ITNewsCell.h"
 
+static NSString *cellId = @"cellId";
 
 @interface ITNewsListViewController ()
 @property (nonatomic, strong) NSMutableArray <ITNews *> *newsList;
@@ -22,6 +24,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //设置表格行高
+    self.tableView.rowHeight = 110;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    //注册原型cell
+    [self.tableView registerNib:[UINib nibWithNibName:@"ITNewsCell" bundle:nil] forCellReuseIdentifier:cellId];
     
 //    self.tableView.tableFooterView = [ITPullupView pullupView];
     ITPullupView *pullup = [ITPullupView pullupView];
@@ -130,9 +139,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId" forIndexPath:indexPath];
+    ITNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId" forIndexPath:indexPath];
     
-    cell.textLabel.text = _newsList[indexPath.row].title;
+//    cell.textLabel.text = _newsList[indexPath.row].title;
+    cell.model = _newsList[indexPath.row];
+    
     return cell;
 }
 - (void)didReceiveMemoryWarning {
