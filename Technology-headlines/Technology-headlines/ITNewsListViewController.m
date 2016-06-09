@@ -32,16 +32,26 @@
     [self loadData];
 }
 
-#pragma mark -加载数据
+#pragma mark -刷新
 
 //- (void)loadData{
 - (IBAction)loadData{
     NSLog(@"开始刷新");
+   
+    NSString *timeStr;
     
-    NSString *timeStr = [self timeString];
+    BOOL isPullup = _pullipView.indicator.isAnimating;
     
-    //URL
-    NSString *urlString = [NSString stringWithFormat:@"http://news.coolban.com/Api/Index/news_list/app/2/cat/0/limit/20/time/%@/type/0?channel=appstore&uuid=204ACEB6-9827-4AC7-A107-7CE2E48B0897&net=5&model=iPhone&ver=1.0.5",timeStr];
+    if (isPullup) {
+        NSLog(@"开始上拉刷新");
+        timeStr = _newsList.lastObject.addtime;
+    } else {
+       NSLog(@"开始下拉刷新");
+        timeStr = [self timeString];
+    }
+    
+     //URL
+    NSString *urlString = [NSString stringWithFormat:@"http://news.coolban.com/Api/Index/news_list/app/2/cat/0/limit/20/time/%@/type/%d?channel=appstore&uuid=204ACEB6-9827-4AC7-A107-7CE2E48B0897&net=5&model=iPhone&ver=1.0.5",timeStr,isPullup];
     
     NSURL *url = [NSURL URLWithString:urlString];
     
@@ -82,6 +92,7 @@
     }]resume];
 }
 
+#pragma mark -获取时间
 - (NSString *)timeString {
     NSDate *date = [NSDate date];
     
@@ -98,6 +109,8 @@
         NSLog(@"最后一行，刷新");
         
         [_pullipView.indicator startAnimating];
+   
+        [self loadData];
     }
 }
 
